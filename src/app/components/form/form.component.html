@@ -1,0 +1,87 @@
+<div class="content">
+  <div class="container-block">
+    <div class="form-block">
+      <form>
+        <p class="form-title">Form Title</p>
+
+        <div class="input">
+          <mat-form-field class="input-block" appearance="fill">
+            <mat-label>Input Label</mat-label>
+            <input matInput [(ngModel)]="value1" name="valueOne" [formControl]="valueOne" [required]="!required" [disabled]="disabled">
+            <button mat-button *ngIf="value1" matSuffix mat-icon-button aria-label="Clear" (click)="value1=''">
+              <mat-icon>close</mat-icon>
+            </button>
+            <mat-error *ngIf="!required ? valueOne.invalid : ''">
+              Error Message
+            </mat-error>
+          </mat-form-field>
+
+          <mat-form-field class="input-block" appearance="fill">
+            <mat-label>Input Label</mat-label>
+            <input matInput [(ngModel)]="value2" name="valueTwo" [formControl]="valueTwo" [required]="!required" [disabled]="disabled">
+            <button mat-button *ngIf="value2" matSuffix mat-icon-button aria-label="Clear" (click)="value2=''">
+              <mat-icon>close</mat-icon>
+            </button>
+            <mat-error *ngIf="!required ? valueTwo.invalid : ''">
+              Error Message
+            </mat-error>
+          </mat-form-field>
+        </div>
+
+        <div class="radio">
+          <div class="block">
+            <mat-label>Experience with Angular 10-11</mat-label>
+            <mat-radio-group class="radio-group" aria-label="Experience with Angular 10-11" [disabled]="disabled">
+              <mat-radio-button value="no">No</mat-radio-button>
+              <mat-radio-button value="yes" [checked]="true">Yes</mat-radio-button>
+            </mat-radio-group>
+          </div>
+
+          <div class="block">
+            <mat-label>Estimate for the task - 4h</mat-label>
+            <mat-radio-group class="radio-group" aria-label="Estimate for the task - 4h" [disabled]="disabled">
+              <mat-radio-button value="1">No</mat-radio-button>
+              <mat-radio-button value="2" [checked]="true">Yes</mat-radio-button>
+            </mat-radio-group>
+          </div>
+        </div>
+
+        <mat-form-field class="input-block" appearance="fill">
+          <mat-label>Input Label</mat-label>
+          <input matInput [(ngModel)]="value3" name="valueThree" [formControl]="valueThree" [required]="!required" [disabled]="disabled">
+          <button mat-button *ngIf="value3" matSuffix mat-icon-button aria-label="Clear" (click)="value3=''">
+            <mat-icon>close</mat-icon>
+          </button>
+          <mat-error *ngIf="!required ? valueThree.invalid : ''">
+            Error Message
+          </mat-error>
+        </mat-form-field>
+
+
+        <mat-form-field class="input-block" appearance="fill">
+          <mat-label>Input Label</mat-label>
+          <input matInput [(ngModel)]="value4" name="valueFour" [formControl]="valueFour" [required]="!required" [disabled]="disabled">
+          <button mat-button *ngIf="value4" matSuffix mat-icon-button aria-label="Clear" (click)="value4=''">
+            <mat-icon>close</mat-icon>
+          </button>
+          <mat-error *ngIf="!required ? valueFour.invalid : ''">
+            Error Message
+          </mat-error>
+        </mat-form-field>
+
+        <mat-form-field class="input-block" appearance="fill">
+          <mat-label>Input Label</mat-label>
+          <input matInput [(ngModel)]="value5" name="valueFive" [formControl]="valueFive" [required]="!required" [disabled]="disabled">
+          <button mat-button *ngIf="value5" matSuffix mat-icon-button aria-label="Clear" (click)="value5=''">
+            <mat-icon>close</mat-icon>
+          </button>
+          <mat-error *ngIf="!required ? valueFive.invalid : ''">
+            Error Message
+          </mat-error>
+        </mat-form-field>
+
+        <button class="button" (click)="onDisabled()">Next</button>
+      </form>
+    </div>
+  </div>
+</div>

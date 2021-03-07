@@ -1,0 +1,26 @@
+<div class="content">
+  <div class="header">
+    <p class="header-title">Your diary</p>
+
+    <span class="material-icons">
+      arrow_forward
+    </span>
+  </div>
+
+  <app-frame-edit></app-frame-edit>
+  <div class="block" *ngFor="let message of messages; let i = index">
+    <div class="block-header">
+      <div class="date">
+        <span class="material-icons">
+          date_range
+        </span>
+        <p>{{ jstoday }}</p>
+      </div>
+
+      <span class="material-icons">
+        more_vert
+      </span>
+    </div>
+    <p>{{ message.message }}</p>
+  </div>
+</div>

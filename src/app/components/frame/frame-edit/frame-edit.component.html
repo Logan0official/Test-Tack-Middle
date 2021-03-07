@@ -1,0 +1,28 @@
+<form (ngSubmit)="onSubmit(f)" #f="ngForm">
+  <div class="textarea">
+    <mat-form-field class="textarea-block" appearance="fill">
+      <textarea matInput type="text" id="message" class="form-control" placeholder="Write something" name="message"
+        [(ngModel)]="message" (blur)="onBlur()" (focus)="onFocus()" rows="4"></textarea>
+
+    </mat-form-field>
+  </div>
+
+
+
+  <!-- <button class="btn btn-primary" type="button" (click)="onClear()">Clear</button> -->
+
+</form>
+
+<div class="block">
+  <div class="emoji">
+    <span (click)="toggleEmojiPicker()" class="material-icons">
+      mood
+    </span>
+    <emoji-mart class="emoji-mart" *ngIf="showEmojiPicker" (emojiSelect)="addEmoji($event)" title="Pick your emoji…">
+    </emoji-mart>
+  </div>
+
+  <form (ngSubmit)="onSubmit(f)" #f="ngForm">
+    <button class="btn btn-success" type="submit">Save</button>
+  </form>
+</div>

@@ -1,0 +1,60 @@
+form {
+  .textarea {
+    .textarea-block {
+      border: 1px solid #f7f8f9;
+      box-sizing: border-box;
+      border-radius: 4px;
+      width: 100%;
+    }
+
+    ::ng-deep .mat-form-field.mat-focused {
+      border: 2px solid #3f51d5;
+    }
+
+    ::ng-deep .mat-form-field-wrapper {
+      padding: 0;
+    }
+
+    ::ng-deep .mat-form-field-underline {
+      display: none;
+    }
+
+    ::ng-deep .mat-form-field-appearance-fill .mat-form-field-flex {
+      background-color: transparent;
+    }
+  }
+}
+
+.block {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  .emoji {
+    span {
+      cursor: pointer;
+      color: #3e52be;
+    }
+  }
+
+  form {
+    button {
+      padding: 4px 20px;
+      background-color: #224272;
+      border-radius: 18px;
+      font-family: Roboto;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 10px;
+      line-height: 16px;
+      color: #ffffff;
+      border: none;
+    }
+  }
+}
+
+button:active, button:focus {
+  outline: none;
+}
